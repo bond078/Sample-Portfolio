@@ -1,0 +1,1081 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* Fixed Side Navigation */
+
+.sidenav{
+    position: fixed;
+    right: 0; 
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #f0d850;
+    /* padding: .8% .9%; */
+    padding: .8rem .7rem;
+    min-height: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* z-index: 2030; */
+    z-index: 50;
+}
+
+.social li{
+    list-style-type: none;
+    padding: 30% 0;
+
+}
+
+.social a{
+    text-decoration: none;
+    color: #2d7594;
+}
+
+/* End of Fixed Side Navigation */
+
+
+
+
+/* Scroll Navigation: Appears when the screen reaches a certain point */
+
+.scrollnav{
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    transition: all .5s ease;
+    background-color: rgba(45, 117, 148, 0);
+    height: 65px;
+    line-height: 65px;
+}
+
+.scrollnavshow{
+    display: block;
+    background-color: rgba(45, 117, 148, .9);
+}
+
+.scrollnav ul{
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.scrollnav ul li{
+    /* padding: 25px 40px; */
+    padding: 0 40px;
+}
+
+.scrollnav ul li a{
+    text-decoration: none;
+    color: #f0d850;
+    font-size: 1.2rem;
+    display: none;
+}
+
+/* End of scroll Navigation */
+
+
+.uparrow{
+    position: fixed;
+    right: 2.5%; 
+    top: 95%;
+    transform: translateY(-95%);
+    display: none;
+}
+
+.uparrowshow{
+    display: block;
+}
+
+.uparrow img{
+    height: 2.8rem;
+    background-color: #2d7594;
+    /* padding: 10%; */
+    padding: 5px;
+    border: solid 1px none;
+    border-radius: 100%;
+}
+
+
+/* Mobile navigation */
+
+.mobileNav{
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 100;
+    min-height: 60vh;
+    min-width: 100vw;
+    overflow: scroll;
+    transform: translateY(-100vh);
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+.mobileNavTog{
+    transform: translateY(65px);
+    opacity: 1;
+}
+
+.mobileNav .mobileNavUL{
+    list-style-type: none;
+    background-color: #2d7594;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+    min-width: 100vw;
+    padding: 50px 0;
+}
+
+.mobileNav .mobileNavUL li{
+    margin-bottom: 1.2rem;
+    min-width: 100%;
+    text-align: center;
+}
+
+.mobileNav .mobileNavUL li a{
+    text-decoration: none;
+    color: white;
+    font-size: 2rem;
+    padding: 20px 0;
+}
+
+.mobileNav {
+    /* // IE 10+ */
+    -ms-overflow-style: none;
+    /* // Firefox */
+    overflow: -moz-scrollbars-none;
+}
+.mobileNav::-webkit-scrollbar { 
+    display: none;   
+    /* Safari and Chrome */
+}
+
+.mobileNavCont{
+    position: fixed;
+    width: 100%; 
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 110;
+    background-color: #2d7594;
+    border-bottom: solid 1px white;
+    height: 65px;
+}
+
+.mobileNavCont h3{
+   color: #f1f0f0;
+   padding: 0 20px;
+}
+
+.mobileToggle{
+	display: none;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+    padding: 0 20px;
+    cursor: pointer;
+}
+.mobileToggle > div{
+	width: 35px;
+	height: 5px;
+	background-color: #f1f0f0;
+	margin: 4px 0;
+}
+
+.navColor{
+    background-color: black;
+}
+
+.bar1, .bar2, .bar3 {
+    transition: 0.4s;
+}
+
+/* Rotate first bar */
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-5px,4px) ;
+    /* transform: rotate(-45deg) translate(-9px, 8px); */
+}
+
+/* Fade out the second bar */
+.change .bar2 {
+    opacity: 0;
+}
+
+/* Rotate last bar */
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+    /* transform: rotate(45deg) translate(-9px, -10px); */
+}
+
+/* End of mobile navigation */
+
+
+
+/* Header section, setting up flexbox columns, and the navigation */
+
+.headerintro{
+    display: flex;
+}
+
+.headerintro nav{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    padding: 50px;
+}
+
+header nav h3{
+    color: #f0d850;
+    font-size: 1.5rem;
+}
+
+header nav ul{
+    display: flex;
+}
+
+header nav li{
+    list-style-type: none;
+    margin-right: 30px;
+    padding-top: 15px;
+}
+
+header nav li a{
+    text-decoration: none;
+    color: white;
+}
+
+header nav li a:hover{
+    color: #f0d850;
+}
+
+.headertext{
+    min-height: 100vh;
+    width: 50vw;
+    background-color: #2d7594;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.textwrap{
+    text-align: left;
+    padding: 60px 5px;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.textrise{
+    opacity: 0;
+	transform: translateY(10vh);
+	transition: .5s linear 1.6s; 
+}
+
+.textrise > p > span{
+    color: white;
+}
+
+.textrise > p > span:nth-child(1){
+    transform: translateX(40vw);
+    opacity: 0;
+    transition: .5s ease-in 2.3s; 
+}
+
+.textrise > p > span:nth-child(2){
+    transform: translateX(40vw);
+    opacity: 0;
+    transition: .5s ease-in 2.9s; 
+}
+
+.textrise > p > span:nth-child(3){
+    transform: translateX(40vw);
+    opacity: 0;
+    transition: .5s ease-in 3.5s; 
+}
+
+.headertext h1, .headertext p{
+    color: white;
+}
+
+.headertext h1{
+    font-size: 6rem;
+}
+
+.headertext h1 .typedtext{
+    color: #f0d850;
+    font-size: 2.6rem;
+}
+
+.headerimg{
+    min-height: 100vh;
+    width: 50vw;
+}
+
+.imghere{
+    height: 100%;
+    width: 100%; 
+    background-image: url("images/actor2.jpg");
+    /* background-attachment: fixed; */
+    background-position: center 0%;
+    background-repeat: no-repeat;
+    background-size: cover;  
+}
+
+
+/* End of Header section, setting up flexbox columns, and the navigation */
+
+
+
+
+/* About Us Section */
+
+.about{
+    background-color: #f1f0f0;
+}
+
+.about .container{
+    max-width: 45%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 5% 1%;
+    /* background-color: yellow; */
+}
+
+.about h1{
+    font-size: 3rem;
+    color: #2d7594;
+    margin: 2% 0;
+    font-weight: bold;
+}
+
+.about p{
+    padding-bottom: 2%;
+    line-height: 1.8em;
+}
+
+.about .btn{
+    text-decoration: none;
+    background-color: #f0d850;
+    padding: 15px 30px;
+    display: inline-block;
+    /* width: 35%; */
+    margin: 0 auto;
+    color: #2d7594;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.about .btn:hover{
+    background-color: #2d7594;
+    color: #f0d850;
+}
+
+
+/* End of About Us Section */
+
+
+
+
+/* Start of resume Section */
+
+.resume{
+    height: 100%;
+    width: 50vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: gray;
+    transform: translateX(-100vw);
+    transition: .8s ease-in .2s;
+    background-color: #2d7594;
+    overflow: scroll;
+    z-index: 120;
+    opacity: 0;
+}
+
+.resume {
+    /* // IE 10+ */
+    -ms-overflow-style: none;
+    /* // Firefox */
+    overflow: -moz-scrollbars-none;
+}
+.resume::-webkit-scrollbar { 
+    display: none;   
+    /* Safari and Chrome */
+}
+
+.resumetog{
+    transform: translateX(0vw);
+    opacity: 1;
+}
+
+.resumecontainer{
+    width: 90%;
+    margin: 0 auto;
+    padding: 5% 2%;
+    display: none;
+}
+
+.title{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.resume h2{
+    color: #f0d850;
+    font-size: 2.5rem;
+}
+
+.exit{
+    height: 35px;
+    cursor: pointer;
+}
+
+.lifedescription{
+    display: flex;
+    align-items: flex-end;
+    border-bottom: solid 1px white;
+    padding: 2rem 0;
+}
+
+.lifedescription .lifeleft{
+    flex: 1;
+}
+
+.lifedescription .liferight{
+    flex: 1;
+    justify-content: flex-end;
+}
+
+.lifeleft p{
+    color: white;
+    padding: 1% 0;
+}
+
+.liferight a{
+    /* text-decoration: none; */
+    color: white;
+}
+
+.liferight i{
+    color: white;
+    margin-right: .5rem;
+}
+
+.experience{
+    display: flex;
+    padding-top: 1rem;
+}
+
+.experience h4{
+    color: #f0d850;
+    font-size: 1.6rem;
+    font-weight: lighter;
+    padding-bottom: 1.6rem;
+}
+
+.experience p{
+    color: white;
+    padding-bottom: .6rem;
+}
+
+.skills, .theater, .film, .education, .tv, .awards{
+    width: 50%;
+    padding: 2% 0;
+}
+
+
+/* End of resume section */
+
+
+
+
+
+
+/* Start of show reel section */
+
+.showreel h1{
+    text-align: center;
+    padding: 6% 1%;
+    font-size: 4.3rem;
+    color: #2d7594;
+    letter-spacing: .2rem;
+}
+
+.showreelcont{
+    background-color: rgba(37, 37, 37, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    width: 100%;
+}
+
+.showreelimg{
+    height: 70vh;
+    width: 100%;
+    background-image: url("images/showreel.jpeg");
+    /* background-attachment: fixed; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 20%;
+    cursor: pointer;
+}
+
+.playvideo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%
+}
+
+.playvideo p{
+    color: white;
+    font-size: 1.6rem;
+    border-bottom: solid 2px white;
+    cursor: pointer;
+}
+
+.playvideo i{
+    color: white;
+    font-size: 3rem;
+    margin-right: .5%;
+    cursor: pointer;
+}
+
+
+
+/* Display Video Section */
+
+.displayvideo{
+    height: 100vh;
+    width: 100vw;
+    background-color: #312f2f;
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* display: none; */
+    transition: .1s linear .5s;
+    z-index: -1;
+    opacity: 0;
+}
+
+.revealvid{
+    z-index: 130;
+    opacity: 1;
+    /* display: block; */
+}
+
+.exitcont{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 2% 40px;
+    margin-bottom: 2rem;
+}
+
+.exitvideo{
+    /* height: 1.4rem; */
+    height: 35px;
+    cursor: pointer;
+}
+
+.videocont{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.videocont video{
+    width: 70%;
+    height: auto;
+}
+
+.videoinfo{
+    display: flex;
+    flex-direction: column;
+    padding: 0 3%;
+    color: #f9f9f9;
+}
+
+.videoinfo h2{
+    margin-bottom: 10%;
+    font-weight: normal;
+}
+
+.videoinfo a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    margin-bottom: 10%;
+    color: #f9f9f9;
+    cursor: pointer;
+}
+
+
+.videoinfo a i{
+    margin-right: 12%;
+}
+
+.videoinfo a p, i{
+    font-size: 1.2rem;
+    font-weight: 100;
+}
+
+.videoinfo .vidtime{
+    font-size: .8rem;
+    margin-top: 4%;
+}
+
+
+/* End of Display Video Section */
+
+
+
+/* Start of Photo Section */
+
+.photos h1{
+    text-align: center;
+    padding: 6% 1%;
+    font-size: 4.3rem;
+    color: #2d7594;
+    letter-spacing: .2rem;
+}
+
+.photocont{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.row1, .row2{
+    width: 100%;
+    height: 310px;
+    /* background-color: blue; */
+}
+
+.row2{
+    margin-top: 2%;
+    height: 370px;
+    margin-bottom: 8%;
+}
+
+.photoone{
+    width: 26%;
+    height: 100%;
+    float: left;
+    margin: 0 1%;
+    background-image: url("images/guy5.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.phototwo, .photothree{
+    width: 34%;
+    height: 100%;
+    float: left;
+    margin: 0 1%;
+}
+
+.phototwo{
+    background-image: url("images/guy1.jpg");
+    background-size: cover;
+    background-position: center 25%;
+    background-repeat: no-repeat;
+}
+
+.photothree{
+    background-image: url("images/guy6.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.photofour, .photofive{
+    width: 38%;
+    height: 100%;
+    float: left;
+    margin: 0 1%;
+}
+
+.photofour{
+    background-image: url("images/guy2.jpeg");
+    background-size: cover;
+    background-position: center 20%;
+    background-repeat: no-repeat;
+}
+
+.photofive{
+    background-image: url("images/guy4.jpg");
+    background-size: cover;
+    background-position: center 10%;
+    background-repeat: no-repeat;
+}
+
+.photosix{
+    width: 18%;
+    height: 100%;
+    float: left;
+    margin: 0 1%;
+    background-image: url("images/guy3.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.highlight{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(45, 117, 148, 0);
+    -webkit-transition: all 3 ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+.photohighlight:hover .highlight{
+    background-color: rgba(45, 117, 148, 0.3);
+    box-shadow: 2px 3px 12px gray;
+}
+
+.photos::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* End of Photo Section */
+
+
+
+/* Contact Section */
+
+.contactflex{
+    display: flex;
+    /* height: 85vh; */
+    width: 100%;
+    background-color:gray;
+}
+
+.contactimg{
+    min-height: 85vh;
+    width: 50%;
+    background-image: url("images/contact.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.contactinfo{
+    min-height: 85vh;
+    width: 50%;
+    background-color: #2d7594;
+    color: #d8d8d8;
+    display: flex;
+    align-items: center;
+}
+
+.contactcont{
+    width: 60%;
+    margin: 0 auto;
+    padding: 3% .5%;
+}
+
+.contactinfo h1{
+    font-size: 4.2rem;
+    font-weight: 900;
+    color: #f0d850;  
+}
+
+.contactinfo h3{
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.contactinfo h4, p{
+    padding: .3rem 0;
+}
+
+.contactinfo p{
+    font-size: .9rem;
+}
+
+.contactinfo h4{
+    font-size: 1.3rem;
+    font-weight: 100;
+}
+
+.contacticons ul{
+    display: flex;
+} 
+
+.contacticons ul li{
+    list-style-type: none;
+    /* display: flex; */
+    margin-right: 5%;
+}
+
+.contacticons ul li a{
+    list-style-type: none;
+    color: white;
+}
+
+.contacticons i{
+    font-size: .9rem;
+}
+
+/* End of contact section */
+
+/* Footer Section */
+
+footer{
+    text-align: center;
+    /* padding: 1.4% 0; */
+    padding: 25px 0;
+    max-width: 100%;
+}
+
+footer p{
+    font-size: .8rem;
+    font-weight: 100;
+}
+
+
+
+.jumptarget:target::before {
+    content: "";
+    display: block;
+    height: 65px; 
+    margin: -65px 0 0; 
+}
+
+.forBio:target::before{
+    content: "";
+    display: block;
+    height: 0px; 
+    margin: 0px 0 0;
+}
+
+
+/* Media queries */
+@media(max-width: 1024px){
+    .headertext h1{
+        font-size: 5.4rem;
+    }
+    
+    .headertext h1 span{
+        font-size: 2rem;
+    }
+
+    .textwrap{
+        width: 70%;
+    }
+
+    .about .container{
+        max-width: 65%;
+        margin: 0 auto;
+        text-align: center;
+        padding: 5% 1%;
+        /* background-color: yellow; */
+    }
+
+    .resume{
+        width: 100vw;
+    }
+}
+
+@media(min-width: 880px){
+    .mobileNav{
+        display: none;
+    }
+}
+
+@media(max-width: 880px){
+    .headerintro{
+        flex-direction: column;
+        overflow-x: hidden;
+    }
+
+    .headertext{
+        min-height: 70vh;
+        width: 100vw;
+    }
+
+    .headerimg{
+        min-height: 50vh;
+        width: 100vw;
+    }
+    
+    .imghere{
+        min-height: 50vh;
+        max-width: 100%;
+        background-position: center 5%;
+    }
+
+    .headertext h1{
+        font-size: 5.2rem;
+    }
+    
+    .headertext h1 span{
+        font-size: 2.2rem;
+    }
+
+    .textwrap{
+        text-align: left;
+        /* padding: 20px 5px; */
+        padding: 40px 5px;
+        width: 60%;
+    }
+
+    .headerintro nav{
+        padding: 25px;
+    }
+
+    header nav h3{
+        font-size: 1.4rem;
+    }
+
+    header nav li a{
+        font-size: .9rem;
+    }
+
+    .contactflex{
+        flex-direction: column;
+        overflow: hidden;
+    }
+    
+    .contactimg{
+        min-height: 65vh;
+        width: 100vw;
+    }
+    
+    .contactinfo{
+        min-height: 70vh;
+        width: 100vw;
+        text-align: center;
+    }
+
+    .contacticons{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40%;
+        margin: 0 auto;
+    }
+
+    .contacticons ul{
+        justify-content: center;
+    }
+
+    .contacticons ul li{
+        margin-right: 20%;
+    }
+
+    .videocont{
+        flex-direction: column;
+        width: 70%;
+    }
+    
+    .videocont video{
+        width: 100%;
+        height: auto;
+    }
+    
+    .videoinfo{
+        display: flex;
+        flex-direction: column;
+        padding: 0 3%;
+        color: #f9f9f9;
+    }
+
+    .videoinfo h2{
+        margin: 10% 0 2% 0;
+    }
+    
+    .videoinfo a{
+        margin-bottom: 2%;
+    }  
+    
+    .photoone, .phototwo, .photothree, .photofour, .photofive, .photosix{
+        width: 90%;
+        margin: 2% 5%;
+    }
+
+    .photosix{
+        margin-bottom: 10%;
+    }
+    
+    header nav ul{
+        display: none;
+    }
+
+    header nav h3{
+        display: none;
+    }
+
+    .mobileToggle{
+        display: block;
+    }
+
+    .mobileNavCont{
+        display: flex;
+    }
+
+    .sidenav{
+        display: none;
+    }
+    .jumptarget:target::before {
+        content: "";
+        display: block;
+        height: 65px; /* fixed header height*/
+        margin: -65px 0 0; /* negative fixed header height */
+    }
+}
+
+@media(max-width: 500px){
+    .textwrap{
+        width: 75%;
+        /* padding: 40px 5px; */
+        padding: 55px 5px;
+    }
+
+    .headertext h1{
+        font-size: 4rem;
+    }
+
+    .headertext{
+        min-height: 65vh;
+    }
+
+    .mobileNav{
+        min-height: 50vh;
+    } 
+    .mobileNav .mobileNavUL{
+        min-height: 50vh;
+    }
+
+    /* .jumptarget:target::before {
+        content: "";
+        display: block;
+        height: 65px; 
+        margin: -65px 0 0; 
+    } */
+}
+

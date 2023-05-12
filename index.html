@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+</head>
+<body onresize="clearScrollNav()">
+    <header id="scrolltop">
+        <div class="sidenav">
+            <ul class="social">
+                <li><a href="https://www.facebook.com/sikshyabhattrai?mibextid=ZbWKwL"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="https://twitter.com/sikshyabhattrai?t=cZl9EHOyUahwMsfykqJyGw&s=09"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="https://instagram.com/sikshyabhattarai?igshid=OTk0YzhjMDVlZA=="><i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://youtube.com/@sikshyabhattarai"><i class="fab fa-youtube"></i></a></li>
+            </ul>
+        </div>
+
+        <div class="scrollnav">
+            <ul>
+                <li><a href="#about" onclick="forBio()">Bio</a></li>
+                <li><a href="#showreel">Video</a></li>
+                <li><a href="#photos">Photos</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="mobileNavCont">
+            <h3>Sikshya Bhattrai </h3>
+            <div class="mobileToggle" onclick="menuChange(this); mobileNav()">
+                <div class="bar1 bar"></div>
+                <div class="bar2 bar"></div>
+                <div class="bar3 bar"></div>
+            </div>
+        </div>
+
+        <div class="mobileNav">
+            <ul class="mobileNavUL">
+                <li><a href="#about" onclick="mobNavClickedLink()">Bio</a></li>
+                <li><a href="#showreel" onclick="mobNavClickedLink()">Video</a></li>
+                <li><a href="#photos" onclick="mobNavClickedLink()">Photos</a></li>
+                <li><a href="#contact" onclick="mobNavClickedLink()">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="uparrow">
+            <a href="#scrolltop">
+                <img src="images/up-scroll-arrow.svg" alt="scroll-up">
+            </a>
+        </div>
+
+        <div class="headerintro">
+            <div class="headertext">
+                <nav>
+                    <h3>Sikshya Bhattrai</h3>
+                    <ul>
+                        <li><a href="#about" onclick="forBio()">Bio</a></li>
+                        <li><a href="#showreel">Video</a></li>
+                        <li><a href="#photos">Photos</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <div class="textwrap">
+                    <h1><span class="typedtext"></span></h1>
+                        <div class="textrise">
+                            <h1>Sikshya <br> Bhattrai</h1>
+                            <br>
+                            <p>
+                                <span>Actor /</span>
+                                <span>Performer /</span>
+                                <span>Model</span>
+                            </p>
+                        </div>
+                </div>
+            </div>
+            <div class="headerimg">
+                <div class="imghere"></div>
+            </div>
+        </div>
+    </header>
+
+    
+    <section class="about jumptarget" id="about">
+        <div class="container">
+            <h1>About Me</h1>
+            <br>
+            <p>I would like to introduce myself as an individual who is deeply passionate about acting and has extensive experience in theater,I am committed to bringing stories to life on stage. With several years of acting experience, I have developed my skills in character development, script analysis, and stagecraft, while also working collaboratively with directors, fellow actors, and production staff. Whether portraying intricate characters or contributing to ensemble performances, I thrive on the challenge and reward of live theater. I am excited to bring my talent and dedication to new opportunities in the world of theater and beyond..</p>
+            <br>
+            <p>Throughout my career, I have had the opportunity to work on a wide range of productions, from experimental pieces in intimate venues to large-scale productions with complex sets and choreography. This has allowed me to develop versatility in my acting style and adaptability to different creative environments. I am also skilled in the use of various accents and dialects, adding an extra layer of depth and authenticity to my performances.
+
+In addition to my experience in theater, I have also dabbled in film and television, taking on roles in independent films and local productions. These experiences have allowed me to further hone my craft and develop my skills in front of the camera.
+
+As a dedicated and hardworking individual, I am committed to continuous improvement and always seek out opportunities to learn and grow as an artist. I am excited to bring my passion and skills to new projects and work with like-minded individuals to create impactful and memorable performances</p>
+            <br>
+            <a class="btn" onclick="resume()">View Full Resume</a>
+        </div>
+    </section>
+
+    <section class="resume">
+        <div class="resumecontainer">
+            <div class="title">
+                <h2>Resume</h2>
+                <img src="images/cross-out.svg" alt="exit" class="exit" onclick="exitResume()">
+            </div>
+
+            <div class="lifedescription">
+                <div class="lifeleft">
+                    <p>Born: 1999</p>
+                    <p>Height: 5"4</p>
+                    <p>Eye Color: Brown</p>
+                    <p>Hair Color: Dark Brown</p>
+                    <p>Languages: Nepali,English </p>
+                </div>
+                <div class="liferight">
+                    <a href="resume.pdf" target="_blank" download><i class="fas fa-file"></i></a>         
+                    <a href="resume.pdf" target="_blank" download>Download Resume</a>
+                </div>
+            </div>
+
+            <div class="experience">
+                <div class="skills">
+                    <h4>Special Skills</h4>
+                    <p>Dancing</p>
+                    <p>Singing</p>
+                    <p>Art</p>
+                    <p> </p>
+                </div>
+                <div class="theater">
+                    <h4>Theater</h4>
+                    <p>2023, Halla Bol / Che Shankar / Theater / Playes as Daughter/ Girlfriend</p>
+                    <p>2023, Kohi Kina Barbad Hos / Che Shankar  / Theater / Friend of Main Character </p>
+                </div>
+            </div>
+            <div class="experience">
+                <div class="film">
+                    <h4>Short Film</h4>
+                    <p>2023, Unresonable / Yudeep Sitoula / Main Character</p>
+                </div>
+                <div class="education">
+                    <h4>Education & Training</h4>
+                    <p>Institution / Workshop Name / Instructor</p>
+                    <p>Institution / Workshop Name / Instructor</p>
+                    <p>Institution / Workshop Name / Instructor</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="showreel jumptarget" id="showreel">
+        <h1> Video</h1>
+            <div class="showreelimg" onclick="toggleVideo()">
+                <div class="showreelcont">
+                    <div class="playvideo">
+                        <i class="far fa-play-circle"></i>
+                        <p>Play Video</p>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+
+    <section class="displayvideo">
+        <div class="exitcont" onclick="toggleVideo()">
+            <img src="images/cross-out.svg" class="exitvideo">
+        </div>
+
+        <div class="videocont">
+            <video src="video.mp4" autoplay controls></video>
+
+            <div class="videoinfo">
+                <h2> Video </h2>
+                <a>
+                    <i class="fas fa-share-alt"></i>
+                    <p>share</p>                       
+                </a>
+                <!-- Go to www.addthis.com/dashboard to customize your tools --> 
+                <div class="addthis_inline_share_toolbox social"></div>  
+                <p class="vidtime">00:30</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="photos jumptarget" id="photos">
+        <h1>Photos</h1>
+        <div class="photocont">
+            <div class="row1">
+                <div class="photoone photohighlight">
+                    <div class="highlight"></div>
+                </div>
+                <div class="phototwo photohighlight">
+                    <div class="highlight"></div>
+                </div>
+                <div class="photothree photohighlight">
+                    <div class="highlight"></div>
+                </div>
+            </div>
+            <div class="row2">
+                <div class="photofour photohighlight">
+                    <div class="highlight"></div>
+                </div>
+                <div class="photofive photohighlight">
+                    <div class="highlight"></div>
+                </div>
+                <div class="photosix photohighlight">
+                    <div class="highlight"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="contact jumptarget" id="contact">
+        <div class="contactflex">
+            <div class="contactimg"></div>
+            <div class="contactinfo">
+                <div class="contactcont">
+                    <h1>Contact</h1>
+                    <br>
+                    <br>
+                    <h3>Representation</h3>
+                    <br>
+
+                    <h4>Manager</h4>
+                    <p>Saurav Guragain</p>
+                    <p>Email - saurav@gmail.com</p>
+                    <p>Tel - 98********</p>
+                    <br>
+
+                    <h4>Commercial Agent</h4>
+                    <p>Name</p>
+                    <p>Email - </p>
+                    <p>Tel - </p>
+
+                    <br>
+
+                    <h4>SF Agent</h4>
+                    <p>Name - </p>
+                    <p>Email - </p>
+                    <p>Tel - </p>
+                    <br>
+                    <div class="contacticons">
+                        <ul>
+                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>By Saurav Guragain</p>
+    </footer>
+
+    <script src="js.js"></script>
+
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+<!-- <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5bd4d955aa4aa381"></script> -->
+
+</body>
+</html>
